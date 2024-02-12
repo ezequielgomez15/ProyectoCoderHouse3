@@ -1,0 +1,201 @@
+@import "../base/variables";
+@import "./mixin";
+body{
+    background-color: $colorGrisClaro;
+}
+
+header{
+    background-color: $colorBlancoClaro;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    padding: 5px;
+}
+
+form{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 5px;
+}
+
+nav{
+    background-color: $colorBlancoClaro;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 10px;
+    flex-wrap: wrap;
+    padding: 5px;
+}
+
+ul{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.primer-lista a{
+    text-decoration: none;
+    color: black;
+}
+
+nav ul li img{
+    width: 40px;
+    margin-right: 20px;
+}
+
+.mainp{
+    background-color: $colorGrisClaro;
+    margin: auto;
+    @include flex;
+    flex-wrap: wrap;
+    padding: 40px 0px;
+    flex-direction: column;
+    margin-bottom: 25px;
+}
+
+.mainp2{
+    background-color: $colorGrisClaro;
+    margin: auto;
+    @include flex;
+    flex-wrap: wrap;
+}
+
+button{
+    padding: 5px;
+}
+
+button:active{
+    padding: 2px;
+    font-size: 15.8px;
+} 
+
+.div{
+    @include flex;
+    flex-direction: column;
+    text-align: center;
+    @include prueba(200px, 300px);
+    margin: 0px 4px;
+}
+
+.div h3{
+    font-size: 16px;
+}
+
+.div img{
+    width: 100px;
+}
+
+.div img:hover{
+    box-shadow: 2px 2px 5px black;
+}
+
+footer{
+    background-color: $colorBlancoClaro;
+    @include flex;
+    height: 15vh;
+}
+
+.dropdown{
+    display: none;
+}
+
+.container-de-marcas{
+    @include flex;
+    flex-wrap: wrap;
+}
+
+.container-de-marcas div img{
+    width: 200px;
+    margin: 30px 50px;
+}
+
+.marcas{
+    @include flex;
+    flex-direction: column;
+    background-color: $colorGrisClaro;
+}
+
+.marcas h2{
+    margin:  40px 0px 0px 0px ;
+}
+
+.container-nosotros{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    padding: 5px;
+}
+
+.texto{
+    width: 350px;
+}
+
+.loren_contactanos{
+    border: 1px solid black;
+    @include prueba(300px, 320px);
+    padding: 14px 20px;
+    margin: 0px 460px;
+    margin-bottom: 7px;
+}
+
+.main-formulario{
+    background-color: $colorGrisClaro;
+    @include flex;
+    flex-direction: column;
+    padding: 12px;
+}
+
+.main-formulario h2{
+    margin: 30px;
+}
+
+form{
+    @include flex;
+    flex-direction: column;
+}
+
+@media(max-width: 400px){
+    .loren_contactanos{
+        width: 270px;
+    }
+
+    .mainp .mainp2 .div {
+        margin: 20px 4px;
+    }
+
+
+    .dropdown{
+        display: block;
+    }
+    nav{
+        justify-content: center;
+    }
+
+    form{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .mainp{
+        padding: 20px 0px;
+
+    }
+    
+    div{
+        margin: 10px auto;
+    }
+
+    main div img {
+        width: 140px;
+    }
+
+    .primer-lista{
+        display: none;
+    }
+}
